@@ -1,10 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Ubuntu } from 'next/font/google'
 import './globals.css'
 
 import { ThemeProvider } from '@/components/@core/providers/ThemeProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-sans',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={ubuntu.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
