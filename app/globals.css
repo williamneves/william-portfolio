@@ -53,7 +53,31 @@
   * {
     @apply border-border;
   }
+  html {
+    @apply scroll-smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground min-h-svh;
+    background-color: #f6f6f6;
+    opacity: 1;
+    background-image: repeating-radial-gradient(
+        circle at 0 0,
+        transparent 0,
+        #f6f6f6 14px
+      ),
+      repeating-linear-gradient(#e2e4ef55, #e2e4ef);
+    background-blend-mode: multiply;
+  }
+  .dark body {
+    /* Dark theme styles */
+    opacity: 1;
+    background-color: #0a2851;
+    background-image: repeating-radial-gradient(
+        circle at 0 0,
+        transparent 0,
+        #0a2851 19px
+      ),
+      repeating-linear-gradient(#08080855, #141414);
+    /* background-blend-mode: multiply; */
   }
 }

@@ -17,5 +17,10 @@ export default function PortfolioLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <section className={cn('')}></section>
+  return (
+    <section className={cn('container')}>
+      <ModeToggle />
+      {children}
+    </section>
+  )
 }
