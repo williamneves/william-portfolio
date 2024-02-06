@@ -1,13 +1,12 @@
 import Image from 'next/image'
 import { Hero } from './Hero'
+import { About } from './About'
 
 export default function Home() {
   return (
     <main className="snap-y snap-mandatory">
       <Hero />
-      <section id="about" className="min-h-svh snap-center">
-        About
-      </section>
+      <About />
       <section id="projects" className="min-h-svh snap-center">
         Projects
       </section>
