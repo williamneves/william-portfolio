@@ -57,9 +57,11 @@
     @apply scroll-smooth;
   }
   body {
-    @apply text-foreground min-h-svh;
+    @apply text-foreground;
     background-color: #f6f6f6;
     opacity: 1;
+    min-width: 100vw;
+    min-height: 100vh;
     background-image: repeating-radial-gradient(
         circle at 0 0,
         transparent 0,

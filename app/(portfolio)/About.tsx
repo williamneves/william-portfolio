@@ -1,5 +1,4 @@
 import {
-  AwardIcon,
   BookHeartIcon,
   KanbanIcon,
   ListChecksIcon,
@@ -13,7 +12,10 @@ import { cn } from '@/lib/utils'
 
 export function About() {
   return (
-    <section id="about" className="min-h-svh snap-center">
+    <section
+      id="about"
+      className="mx-auto min-h-svh max-w-full snap-start px-6 sm:max-w-[580px]  md:max-w-[700px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1300px]"
+    >
       <div className="flex flex-col py-4">
         {/* Icon + Hello */}
         <div className="flex flex-col items-center gap-0 opacity-65">

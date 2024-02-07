@@ -1,12 +1,15 @@
 import { Button } from '@/components/ui/button'
-import { FileText, FileTextIcon, HandIcon } from 'lucide-react'
+import { FileTextIcon, HandIcon } from 'lucide-react'
 import PROFILE_GRADIENT from '@/assets/hero-1.png'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 export function Hero() {
   return (
-    <section id="hero" className="min-h-svh snap-center">
+    <section
+      id="hero"
+      className="mx-auto min-h-svh max-w-full snap-start px-6 sm:max-w-[580px]  md:max-w-[700px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1300px]"
+    >
       <div className="h-14" />
       <div className="flex flex-col">
         {/* Icon + Hello */}

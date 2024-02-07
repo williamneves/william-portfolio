@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter, Ubuntu } from 'next/font/google'
+import { Ubuntu } from 'next/font/google'
 import './globals.css'
 
 import { ThemeProvider } from '@/components/@core/providers/ThemeProvider'
+import { cn } from '@/lib/utils'
 
 const ubuntu = Ubuntu({
   subsets: ['latin'],
@@ -22,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ubuntu.className}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body className={cn(ubuntu.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
