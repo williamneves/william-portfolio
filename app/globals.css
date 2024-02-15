@@ -55,6 +55,7 @@
   }
   html {
     @apply scroll-smooth;
+    height: -webkit-fill-available;
   }
   body {
     @apply text-foreground;
@@ -62,6 +63,8 @@
     opacity: 1;
     min-width: 100vw;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
+
     background-image: repeating-radial-gradient(
         circle at 0 0,
         transparent 0,
@@ -82,4 +85,14 @@
       repeating-linear-gradient(#08080855, #141414);
     /* background-blend-mode: multiply; */
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
